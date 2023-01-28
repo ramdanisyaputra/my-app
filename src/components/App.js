@@ -12,8 +12,8 @@ class App extends React.Component {
                 {/* <Header/>
                 <List/> */}
                 <h1>Heloo World</h1>
-                {this.state.books.map(item =>
-                    <div>
+                {this.state.books.map((item, index) =>
+                    <div key={index}>
                         <h3>{item}</h3>
                     </div>
                 )}
