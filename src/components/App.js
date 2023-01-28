@@ -4,15 +4,13 @@ import List from "./List";
 
 class App extends React.Component {
     state = {
-        book: "Chicken soup for the soul"
+        book: "Chicken soup for the soul",
+        author: "Bill Willson"
     }
     render(){
         return(
             <div>
-                <List name="kodeakademia" test="test" myBook={this.state.book}>
-                    <h4>This is title</h4>
-                    <p>oh my paragraph</p>
-                </List>
+                <List book = { this.state.book } author = { this.state.author }/>
             </div>
         )
     }
