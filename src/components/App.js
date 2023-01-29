@@ -5,18 +5,28 @@ import React from "react";
 
 class App extends React.Component {
     state = {
-        name: "kodeakademia"
+        name: "kodeakademia",
+        text: ""
     }
-    change = () => {
+    click = () => {
         this.setState({
-            name: "kode"
+            name: this.state.text,
+            text: ""
         })
     }
+
+    change = e => {
+        this.setState({
+            text: e.target.value
+        })
+    }
+
     render(){
         return(
             <div>
                 <h1>{this.state.name}</h1>
-                <button onClick={this.change}>Click</button>
+                <input type="text" value={this.state.text} onChange={this.change}/>
+                <button onClick={this.click}>Click</button>
             </div>
         )
     }
